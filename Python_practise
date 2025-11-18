@@ -1,1 +1,135 @@
-
+Q1. Given two integer variables a and b, and a boolean variable flag. The task is to check the status and return accordingly.
+Return True for the following cases:
+Either a or b (not both) is non-negative and the flag is false.
+Both a and b are negative and the flag is true.
+Otherwise, return False.
+class Solution:
+    def checkStatus(self, a, b, flag):
+        if ((a >= 0 and b < 0) and flag is False):
+            return True
+        if ((a < 0 and b >= 0) and flag is False):
+            return True
+        if ((a < 0 and b < 0) and flag is True):
+            return True
+        return False
+Q2. Given a positive integer x. Your task is to check, if it is even or odd (Any number that gives zero as remainder when divided by 2 is an even number).
+Note: Return "Even" if the number is even; otherwise, return "Odd".
+def checkOddEven(x):
+    if (x % 2 == 0):
+        return "Even"
+    else:
+        return "Odd"
+Q3. You are familiar with basics of input/output and many other useful things in Python. This module is all about conditional statements like if, elif, else; for, while, etc.
+In Python, any conditional statement ends with ':' (proper indentation must be followed while working through loops).
+There are two friends, John and Smith, and the parameters j_angry and s_angry to indicate if each is angry. You are in trouble if both of them are angry or no one of them is angry.
+Now, complete the function which returns true if you are in trouble, else return false
+def friends_in_trouble(j_angry, s_angry):
+    if (j_angry==True and s_angry ==True):
+        return True
+    if (j_angry is False and s_angry is False):
+        return True
+        
+    return False
+Q4. You are given a number  and you have to print your answer according to the following:
+If the number is divisible by 3, you print "Fizz" (without quotes)
+If the number is divisible by 5, you print "Buzz" (without quotes)
+If the number is divisible by both 3 and 5, you print "FizzBuzz" (without quotes)
+In any other case, you print the number itself
+def fizzBuzz(number):
+    if number % 3 == 0 and number % 5 == 0:
+        print("FizzBuzz")
+    elif number % 3==0:
+        print("Fizz")
+    elif number % 5==0:
+        print("Buzz")
+    else:
+        print(number)
+Q5. You are given a number n. The number n can be negative or positive. If n is negative, print numbers from n to 0 by adding 1 to n in the neg function. 
+If positive, print numbers from n-1 to 0 by subtracting 1 from n in the pos function.
+def pos(n):
+    ## Write the code
+    for i in range(n-1, -1, -1):
+        print(i, end=" ")
+    
+def neg(n):
+    ##Write the code
+    for i in range(n, 1):
+        print(i, end=" ")
+Q6. Given a positive integer x, the task is to print the numbers from 1 to x in the order as 12, 22, 32, 42, 52, ... (in increasing order).
+def printIncreasingPower(x):
+    i = 1
+    while i*i <= x:
+        print (i * i, end=" ")
+        i += 1
+Q7. Given a positive integer x, the task is to print the numbers from 1 to x in the order as 12, 22, 32, 42, 52, ... (in increasing order).
+def printIncreasingPower(x):
+    i = 1
+    while i*i <= x:
+        print (i * i, end=" ")
+        i += 1
+Q8. Writing for loop in Python is a tad different from C++ and Java counterparts. In this question, we'll learn to print table by using the for loop.
+You are given a number N, you need to print its multiplication table.
+def multiplicationTable(N):
+    for i in range(1, 11):
+        print(N * i, end=" ")
+Q9. You are given a number a and you have to print your answer according to the following:
+If the number is divisible by 3, you print "Fizz" (without quotes)
+If the number is divisible by 5, you print "Buzz" (without quotes)
+If the number is divisible by both 3 and 5, you print "FizzBuzz" (without quotes)
+In any other case, you print the number itself
+a = int(input())
+if a % 3 == 0 and a % 5 == 0:
+    print("FizzBuzz")
+elif a % 3 == 0:
+    print("Fizz")
+elif a % 5 == 0:
+    print("Buzz")
+else:
+    print(a)
+Q10. Given a number x, the task is to print the numbers from x to 0 in decreasing order in a single line.
+def printInDecreasing(x):
+    while (x >= 0):
+        print(x, end=" ")
+        x -= 1
+Q11. You are given a string s, you need to print its characters at even indices(index starts at 0).
+def stringJumper(s):
+    for i in range(0,len(s),2):
+        print(s[i], end="")
+Q12. Given a tuple arr , print "True" if all elements of tuple are different otherwise print "False".
+arr = tuple(map(int, input().split()))
+a = len(set(arr))==len(arr)
+print(a)
+Q13. Given a string s, you need to reverse it.
+def reverseString(s):
+    a = (s[::-1])
+    return a
+Q14. Given name of a person, the task is to welcome the person by printing the name with "Welcome". If name is "John", you should print "Welcome John".
+def welcomeAboard(name):
+    print(f"Welcome",name)
+Q15. In this question, we'll take a look at inbuilt string methods like title(), swapcase(), find(), strip().
+You'll be given a string str and x, you'll perform various operations on them.
+def trim(str):
+    a = str.strip()
+    return a
+def exists(str, x):
+     b = str.find(x)
+     return b
+def titleIt(str):
+    c = str.title()
+    return c
+def casesSwap(str):
+    d = str.swapcase()
+    return d
+Q16.  check if the given string S meets the specified conditions of starting and ending with 'gfg'.
+# Function to check if string
+# starts and ends with 'gfg'
+def gfg(S):
+    b = S.lower()
+    if b.startswith ("gfg") and b.endswith ("gfg"):
+        print("Yes")
+    else:
+        print("No")
+Q17. Given a tuple arr with distinct elements and an integer x, find the index position of x. Assume to have x in the tuple always. Print the index (0-based).
+arr = tuple(map(int, input().split()))
+x = int(input())
+print(arr.index(x))
